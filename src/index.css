@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "Segoe UI", Tahoma, sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: #f5ede2;
+  font-family: var(--font-sans);
+  color: #1d4f48;
+}
+
+.card {
+  background: #fffdf8;
+  border: 1px solid #e8decb;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(29, 79, 72, 0.05);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+::selection {
+  background: #e0b25266;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #b5c7c2;
+  border-radius: 6px;
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes growY {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bar-x {
+  transform-origin: right;
+  animation: grow 0.55s ease both;
+}
+.bar-y {
+  transform-origin: bottom;
+  animation: growY 0.55s ease both;
+}
+.animate-fade-in {
+  animation: fadeIn 0.2s ease both;
+}
